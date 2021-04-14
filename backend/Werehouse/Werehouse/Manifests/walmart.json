@@ -1,0 +1,4 @@
+{
+  "StrivrPlayer": "gs://some-bucket-for-stuff",
+  "StrivrMdm":  "gs://another-bucket"
+}
