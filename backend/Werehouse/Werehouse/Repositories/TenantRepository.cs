@@ -7,7 +7,7 @@ namespace Werehouse.Repositories
     public class TenantRepository
     {
         private static TenantRepository instance;
-        private List<Tenant> tenants = new List<Tenant>();
+        private readonly List<Tenant> tenants = new List<Tenant>();
 
         private TenantRepository() {
             tenants.Add(new Tenant() { Id = Guid.NewGuid(), Name = "Walmart" });

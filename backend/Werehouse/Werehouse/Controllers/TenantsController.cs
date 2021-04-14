@@ -9,7 +9,7 @@ namespace Werehouse.Controllers
     [Route("[controller]")]
     public class TenantsController : ControllerBase
     {
-        private TenantRepository tenantRepository;
+        private readonly TenantRepository tenantRepository;
 
         public TenantsController()
         {
