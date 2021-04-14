@@ -1,6 +1,7 @@
 import React, {ChangeEvent, FormEvent, useState, useEffect} from "react";
 import { Button, Select, MenuItem, TextField, InputLabel, FormControl, Grid } from '@material-ui/core';
 import { makeStyles, createStyles, Theme, withStyles } from '@material-ui/core/styles';
+import axios from "axios";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -134,8 +135,12 @@ const TenantInput: React.FC<Props> = () => {
     const [hmdType, setType] = useState<string>('');
     const [assettag, setAssettag] = useState<string>('');
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    const handleSubmit =  async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        const res = await axios.get('/');
+        alert(res);
+        console.log(res);
+        debugger;
         console.log("tenant: " + name);
         console.log("serial: " + serial);
         console.log("hmdType:" + hmdType);
